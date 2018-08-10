@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Title -->
-    <title>Video Player</title>
+    <title>YouTube Video Player</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -102,7 +102,20 @@
                         <span class="card-title">History</span>
                         <div class="row">
                             <div class="col s12">
-                                <li ng-repeat="historyItem in history">{{historyItem.id}} — {{historyItem.title}}</li>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Video ID</th>
+                                            <th>Video Title</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="historyItem in history">
+                                            <td>{{historyItem.id}}</td>
+                                            <td>{{historyItem.title}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         <div class="row">
